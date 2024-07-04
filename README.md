@@ -1,2 +1,2 @@
 # JavaScript-ItemLister
-Practicing Vanilla JavaScript DOM
+Practicing/Learning Vanilla JavaScript Document Object Model
