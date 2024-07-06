@@ -1,7 +1,7 @@
 /* DISCLAIMER : THIS IS ME PRACTICING AND LEARNING VANILLA JAVA SCRIPT DOM. 
 IT IS NOT MEANT TO RUN, IT IS JUST FOR LEARNING PURPOSES */
 
-// EXAMINE THE DOCUMENT OBJECT // 
+/* EXAMINE THE DOCUMENT OBJECT */ 
 // console.dir(document);
 
 // console.log(document.domain);
@@ -19,7 +19,7 @@ IT IS NOT MEANT TO RUN, IT IS JUST FOR LEARNING PURPOSES */
 // console.log(document.images);
 
 
-// GET ELEMENT BY ID //
+/* GET ELEMENT BY ID */
 // console.log(document.getElementById('header-title'));
 // var headerTitle = document.getElementById('header-title');
 // var header = document.getElementById('main-header')
@@ -30,7 +30,7 @@ IT IS NOT MEANT TO RUN, IT IS JUST FOR LEARNING PURPOSES */
 // headerTitle.innerHTML = '<h3>Hello</h3>';
 // header.style.borderBlock = 'solid 3px green';
 
-// GET ELEMENT BY CLASS NAME // 
+/* GET ELEMENT BY CLASS NAME */ 
 // var items = document.getElementsByClassName('list-group-item');
 // console.log(items);
 // console.log(items[1]);
@@ -48,7 +48,7 @@ IT IS NOT MEANT TO RUN, IT IS JUST FOR LEARNING PURPOSES */
 // }
 
 
-// GET ELEMENT BY TAG NAME // 
+/* GET ELEMENT BY TAG NAME */ 
 // var li = document.getElementsByTagName('li')
 // console.log(li);
 // console.log(li[1]);
@@ -66,7 +66,7 @@ IT IS NOT MEANT TO RUN, IT IS JUST FOR LEARNING PURPOSES */
 // }
 
 
-// QUERY SELECTOR // 
+/* QUERY SELECTOR */ 
 // var header = document.querySelector('#main-header');
 // header.style.borderBottom = 'solid 4px #ccc';
 
@@ -89,7 +89,7 @@ IT IS NOT MEANT TO RUN, IT IS JUST FOR LEARNING PURPOSES */
 // thirdItem.style.color = 'purple';
 
 
-// QUERY SELECTOR ALL //
+/* QUERY SELECTOR ALL */
 // var titles = document.querySelectorAll(".title")
 // console.log(titles);
 // console.log(titles[0]);
@@ -102,3 +102,94 @@ IT IS NOT MEANT TO RUN, IT IS JUST FOR LEARNING PURPOSES */
 //     odd[i].style.backgroundColor = '#f4f4f4';
 //     even[i].style.backgroundColor = '#ccc';
 // }
+
+//==================================================================================================================================================================//
+
+/* TRAVERSING THE DOM */
+
+// // parentNode :
+// var itemList = document.querySelector("#items");
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+
+// // parentNode of parentNode : 
+// console.log(itemList.parentNode.parentNode);
+
+// // parentElement :
+// var itemList = document.querySelector("#items"); 
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement);
+
+// childNodes : 
+// var itemList = document.querySelector("#items");
+// console.log(itemList.childNodes);
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'green';
+
+
+// firstChild :
+// var itemList = document.querySelector("#items");
+// console.log(itemList.firstChild);
+// // firstElementChild :
+// // var itemList = document.querySelector("#items");
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello 1';
+
+
+// lastChild : 
+// var itemList = document.querySelector("#items");
+// console.log(itemList.lastChild);
+// lastElementChild : 
+// var itemList = document.querySelector("#items");
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'Hello 2';
+
+
+// nextSibling : 
+// var itemList = document.querySelector("#items");
+// console.log(itemList.nextSibling);
+// nextElementSibling : 
+// var itemList = document.querySelector("#items");
+// console.log(itemList.nextElementSibling);
+
+
+// previousSibling :
+// var itemList = document.querySelector("#items");
+// console.log(itemList.previousSibling);
+// previousElementSibling : 
+// var itemList = document.querySelector("#items");
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green';
+
+
+// createElement : 
+
+    // // Create a div : 
+    // var newDiv = document.createElement('div');
+
+    // // Add class to div : 
+    // newDiv.className = 'Hello'; 
+
+    // // Add id to div : 
+    // newDiv.id = 'Hello1';
+
+    // // Add attribute to div : 
+    // newDiv.setAttribute('title', 'Hello Div');
+
+    // // Create text node for content in div : 
+    // var newDivText = document.createTextNode('Hello World');
+
+    // // Add text to div : 
+    // newDiv.appendChild(newDivText);
+
+    // // insert into DOM : 
+    // var container = document.querySelector('header .container');
+    // var h1 = document.querySelector('header h1');
+    // newDiv.style.fontSize = '30px';
+    // // ... //
+    // container.insertBefore(newDiv, h1);
+
+
+    // console.log(newDiv);
